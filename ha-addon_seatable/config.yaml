@@ -1,0 +1,30 @@
+name: "Seatable"
+description: "Eine flexible Kollaborationsplattform für dein Smart Home"
+version: "1.0.0"
+slug: "seatable"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports:
+  80/tcp: 8080
+  443/tcp: 8443
+ports_description:
+  80/tcp: "Web interface HTTP"
+  443/tcp: "Web interface HTTPS"
+options:
+  admin_email: "admin@example.com"
+  admin_password: ""
+  server_domain: "localhost"
+  mysql_root_password: ""
+schema:
+  admin_email: "email"
+  admin_password: "password"
+  server_domain: "str"
+  mysql_root_password: "password"
+image: "ghcr.io/{YOUR_GITHUB_USERNAME}/ha-addon_seatable-{arch}"
+webui: "http://[HOST]:[PORT:8080]"
+hassio_api: true
