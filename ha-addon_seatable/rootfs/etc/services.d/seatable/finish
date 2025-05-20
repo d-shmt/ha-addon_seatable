@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Take down the S6 supervision tree when Seatable fails
+# ==============================================================================
+
+if [[ "$1" -ne 0 ]] && [[ "$1" -ne 256 ]]; then
+  bashio::log.warning "Seatable crashed, halting add-on"
+  /run/s6/basedir/bin/halt
+fi
+
+bashio::log.info "Seatable stopped, restarting..."
