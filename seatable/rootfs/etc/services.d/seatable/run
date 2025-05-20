@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the Seatable service
+# ==============================================================================
+
+bashio::log.info "Starting Seatable..."
+exec /usr/bin/seatable.sh

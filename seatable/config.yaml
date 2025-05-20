@@ -1,0 +1,27 @@
+name: "Seatable"
+description: "Seatable - A spreadsheet-like database solution"
+version: "0.1.0"
+slug: "seatable"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports:
+  8000/tcp: 8000
+ports_description:
+  8000/tcp: "Web interface"
+options:
+  admin_email: "admin@example.com"
+  admin_password: ""
+  db_password: ""
+  secret_key: ""
+schema:
+  admin_email: "email"
+  admin_password: "password"
+  db_password: "password"
+  secret_key: "str"
+image: "ghcr.io/d-shmt/{arch}-ha-addon-seatable"
+webui: "http://[HOST]:[PORT:8000]"
