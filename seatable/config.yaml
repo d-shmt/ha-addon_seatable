@@ -23,5 +23,5 @@ schema:
   admin_password: "password"
   db_password: "password"
   secret_key: "str"
-image: "ghcr.io/d-shmt/{arch}-ha-addon-seatable"
+image: "https://github.com/seatable/seatable-release/releases/latest/download/seatable-compose.tar.gz"
 webui: "http://[HOST]:[PORT:8000]"
